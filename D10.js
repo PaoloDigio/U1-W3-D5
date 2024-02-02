@@ -504,6 +504,7 @@ const newEl = function () {
   const myList = document.getElementById("myList");
   const ulLi = document.createElement("li");
   ulLi.appendChild(document.createTextNode("Element"));
+  myList.appendChild(ulLi);
 };
 
 newEl();
