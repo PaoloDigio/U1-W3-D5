@@ -425,7 +425,15 @@ console.log(sumAllTheYears());
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 
-const searchByTitle = function () {};
+const searchByTitle = function (str) {
+  for (let i = 0; i < movies.length; i++) {
+    if (str === movies[i].Title) {
+      return movies[i];
+    }
+  }
+};
+
+searchByTitle("Lord");
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
@@ -471,6 +479,13 @@ tdTags();
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
+const printText = function () {
+  const tds = document.querySelectorAll("td");
+  tds.forEach((td) => {
+    console.log(td.textContent);
+  });
+};
+
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
@@ -485,6 +500,14 @@ bgRedLinks();
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
+const newEl = function () {
+  const myList = document.getElementById("myList");
+  const ulLi = document.createElement("li");
+  ulLi.appendChild(document.createTextNode("Element"));
+};
+
+newEl();
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
@@ -492,6 +515,13 @@ bgRedLinks();
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+
+const classTest = function () {
+  const trs = document.querySelectorAll("tr");
+  trs.classList.add("test");
+};
+
+classTest();
 
 // [EXTRA] JS Avanzato
 
